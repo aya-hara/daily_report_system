@@ -27,8 +27,8 @@ public interface JpaConst {
 
     int ROLE_ADMIN = 1;//管理者権限On(管理者）
     int ROLE_GENERAL = 0; //管理者権限off（一般）
-    int ROLE_DEL_TRUE = 1; //削除フラグon(削除済み）
-    int ROLE_DEL_FALSE = 0; //削除フラグoff(現役）
+    int EMP_DEL_TRUE = 1; //削除フラグon(削除済み）
+    int EMP_DEL_FALSE = 0; //削除フラグoff(現役）
 
     //日報テーブル
     String TABLE_REP = "reports"; //テーブル名
