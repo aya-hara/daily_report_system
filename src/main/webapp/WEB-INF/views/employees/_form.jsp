@@ -21,7 +21,7 @@
 <br/><br/>
 
 <label for="${AttributeConst.EMP_NAME.getValue()}">氏名</label><br />
-<input type="text" name="${Attribute.Const.EMP_NAME.getValue()}" value="${employee.name}"/>
+<input type="text" name="${AttributeConst.EMP_NAME.getValue()}" value="${employee.name}"/>
 <br/><br/>
 
 <label for="${AttributeConst.EMP_PASS.getValue()}">パスワード</label><br />
