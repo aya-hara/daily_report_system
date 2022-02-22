@@ -7,7 +7,7 @@ package constants;
 public interface JpaConst {
 
     //persistance-unit名
-    String PERSISTENCE_UNIT_NAME = "dairy_report_system";
+    String PERSISTENCE_UNIT_NAME = "daily_report_system";
 
     //データ取得件数の最大値
     int ROW_PER_PAGE = 15; //1ページに取得するレコードの数
@@ -64,7 +64,7 @@ public interface JpaConst {
 
     //社員番号とハッシュ化済みパスワードを条件に未削除の従業員を取得する
     String Q_EMP_GET_BY_CODE_AND_PASS = ENTITY_EMP + ".getByCodeAndPass";
-    String Q_EMP_GET_BY_CODE_AND_PASS_DEF = "SELECT e FROMEmployee AS e WHERE e.deleteFlag = 0 AND e.code = :" + JPQL_PARM_CODE + " AND e.password = :" + JPQL_PARM_PASSWORD;
+    String Q_EMP_GET_BY_CODE_AND_PASS_DEF = "SELECT e FROM Employee AS e WHERE e.deleteFlag = 0 AND e.code = :" + JPQL_PARM_CODE + " AND e.password = :" + JPQL_PARM_PASSWORD;
 
     //指定した社員番号を保持する従業員の件数を取得する
     String Q_EMP_COUNT_RESISTERED_BY_CODE = ENTITY_EMP + ".countRegisteredByCode";

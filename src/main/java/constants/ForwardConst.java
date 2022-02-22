@@ -29,7 +29,7 @@ public enum ForwardConst {
     FW_ERR_UNKNOWN("error/unknown"),
     FW_TOP_INDEX("topPage/index"),
     FW_LOGIN("login/login"),
-    FW_EMP_INDEX("emploees/index"),
+    FW_EMP_INDEX("employees/index"),
     FW_EMP_SHOW("employees/show"),
     FW_EMP_NEW("employees/new"),
     FW_EMP_EDIT("employees/edit"),
