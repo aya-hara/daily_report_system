@@ -8,7 +8,6 @@ public enum PropertyConst {
     PEPPER("pepper");
 
     private final String text;
-
     private PropertyConst(final String text) {
         this.text = text;
     }
@@ -16,5 +15,4 @@ public enum PropertyConst {
     public String getValue() {
         return this.text;
     }
-
 }
