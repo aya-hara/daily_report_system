@@ -20,9 +20,9 @@ public class EmployeeService extends ServiceBase{
      * @return 表示するデータのリスト
      */
 
-    public List<EmployeeView>getPerPage(int page){
+    public List<EmployeeView> getPerPage(int page) {
         List<Employee> employees = em.createNamedQuery(JpaConst.Q_EMP_GET_ALL, Employee.class)
-                .setFirstResult(JpaConst.ROW_PER_PAGE * (page-1))
+                .setFirstResult(JpaConst.ROW_PER_PAGE * (page - 1))
                 .setMaxResults(JpaConst.ROW_PER_PAGE)
                 .getResultList();
 
@@ -34,7 +34,7 @@ public class EmployeeService extends ServiceBase{
     */
 
     public long countAll() {
-        long empCount = (long)em.createNamedQuery(JpaConst.Q_EMP_COUNT, Long.class)
+        long empCount = (long) em.createNamedQuery(JpaConst.Q_EMP_COUNT, Long.class)
                 .getSingleResult();
 
         return empCount;

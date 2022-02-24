@@ -151,7 +151,7 @@ import constants.PropertyConst;
      protected int getPage() {
          int page;
          page = toNumber(request.getParameter(AttributeConst.PAGE.getValue()));
-         if(page == Integer.MIN_VALUE) {
+         if (page == Integer.MIN_VALUE) {
              page = 1;
          }
          return page;
