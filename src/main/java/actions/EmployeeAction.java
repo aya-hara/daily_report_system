@@ -45,7 +45,7 @@ public class EmployeeAction extends ActionBase {
         //管理者かどうかのチェック
         if (checkAdmin()) {
 
-            //指定されたページ数の一覧画面に表示するデータを取得
+          //指定されたページ数の一覧画面に表示するデータを取得
             int page = getPage();
             List<EmployeeView> employees = service.getPerPage(page);
 
