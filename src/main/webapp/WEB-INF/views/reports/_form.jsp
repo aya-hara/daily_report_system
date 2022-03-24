@@ -42,6 +42,21 @@
     cols="50">${report.content}</textarea>
 <br />
 <br />
+
+<label for="${AttributeConst.REP_ATTENDANCE.getValue()}">出勤時刻</label>
+<br />
+<input type="time" name="${AttributeConst.REP_ATTENDANCE.getValue()}"
+    value="${report.attendance}" />
+<br />
+<br />
+
+<label for="${AttributeConst.REP_LEAVING.getValue()}">退勤時刻</label>
+<br />
+<input type="time" name="${AttributeConst.REP_LEAVING.getValue()}"
+    value="${report.leaving}" />
+<br />
+<br />
+
 <input type="hidden" name="${AttributeConst.REP_ID.getValue()}"
     value="${report.id}" />
 <input type="hidden" name="${AttributeConst.TOKEN.getValue()}"

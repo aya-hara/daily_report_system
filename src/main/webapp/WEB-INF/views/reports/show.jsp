@@ -4,6 +4,10 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page import="constants.ForwardConst"%>
 
+<%@ page import="constants.ForwardConst"%>
+
+<c:set var="action" value="${ForwardConst.ACT_LIKED.getValue()}" />
+<c:set var="commCrt" value="${ForwardConst.CMD_CREATE.getValue()}" />
 <c:set var="actRep" value="${ForwardConst.ACT_REP.getValue()}" />
 <c:set var="commIdx" value="${ForwardConst.CMD_INDEX.getValue()}" />
 <c:set var="commEdt" value="${ForwardConst.CMD_EDIT.getValue()}" />
@@ -43,6 +47,18 @@
                     <td><fmt:formatDate value="${updateDay}"
                             pattern="yyyy-MM-dd HH:mm:ss" /></td>
                 </tr>
+
+                <tr>
+                    <th>いいね</th>
+                    <td>
+                        <form method="POST" action="<c:url value='?action=${action}&command=${commCrt}' />">
+                           <input type="hidden" name="${AttributeConst.LIKED_COL_REP.getValue()}" value="${report.id}" />
+                           <input type="hidden" name="${AttributeConst.TOKEN.getValue()}" value="${_token}" />
+                           <input type="image" src="images/heart-cl.png" alt="いいね">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
             </tbody>
         </table>
 

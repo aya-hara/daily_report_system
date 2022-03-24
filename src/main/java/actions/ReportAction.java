@@ -114,7 +114,10 @@ public class ReportAction extends ActionBase{
                    getRequestParam(AttributeConst.REP_TITLE),
                    getRequestParam(AttributeConst.REP_CONTENT),
                    null,
-                   null);
+                   null,
+                   getRequestParam(AttributeConst.REP_ATTENDANCE),
+                   getRequestParam(AttributeConst.REP_LEAVING)
+                   );
 
            //日報情報登録
            List<String> errors = service.create(rv);
@@ -156,6 +159,8 @@ public class ReportAction extends ActionBase{
         } else {
 
             putRequestScope(AttributeConst.REPORT, rv); //取得した日報データ
+
+            putRequestScope(AttributeConst.TOKEN,getTokenId());//CSRF対策用トークン
 
             //詳細画面を表示
             forward(ForwardConst.FW_REP_SHOW);
@@ -210,6 +215,8 @@ public class ReportAction extends ActionBase{
             rv.setReportDate(toLocalDate(getRequestParam(AttributeConst.REP_DATE)));
             rv.setTitle(getRequestParam(AttributeConst.REP_TITLE));
             rv.setContent(getRequestParam(AttributeConst.REP_CONTENT));
+            rv.setAttendance(getRequestParam(AttributeConst.REP_ATTENDANCE));
+            rv.setLeaving(getRequestParam(AttributeConst.REP_LEAVING));
 
             //日報データを更新する
             List<String> errors = service.update(rv);
